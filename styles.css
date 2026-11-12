@@ -805,3 +805,12 @@ details[open] .pm::after { transform: rotate(0); }
   .hero .sc-tile { border-radius: 22px; }
 }
 @media (min-width: 761px) { .hero-center .lead { max-width: 680px; } }
+
+/* Phones: carousel cards always crisp (no fade-in haze, no dimming while swiping) */
+@media (max-width: 760px) {
+  .bento > .bcard, .bento > .bcard.reveal:not(.in), .branches > .branch {
+    opacity: 1 !important; transform: none !important; transition: none !important;
+  }
+  .bento > .bcard { scale: calc(1 - .04 * var(--k, 0)); }
+  .branches > .branch { scale: calc(1 - .03 * var(--k, 0)); }
+}
