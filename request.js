@@ -108,8 +108,8 @@
     $("#modeTabs").classList.toggle("pre", m === "preorder");
     const note = $("#modeNote");
     note.textContent = m === "preorder"
-      ? "Don't see it in stock? We'll look for it and message you when we find a match."
-      : "We'll check our current units and reply with what's available.";
+      ? "Want a specific model? We'll get it ready and message you."
+      : "Tell us what you're looking for and we'll reply with real photos.";
     note.style.animation = "none"; void note.offsetWidth; note.style.animation = "";
     $("#submitLabel").textContent = m === "preorder" ? "Send pre-order request" : "Send my question";
     try { history.replaceState(null, "", location.pathname + "?" + new URLSearchParams({ ...Object.fromEntries(q), mode: m }).toString()); } catch { /* ignore */ }
